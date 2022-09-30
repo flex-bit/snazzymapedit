@@ -12,6 +12,7 @@ export default function Home() {
   );
   const [isError, setError] = useState(false);
   const [isDisable, setIsDisable] = useState(true);
+  const [isPaste, setIsPaste] = useState(false);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -21,8 +22,14 @@ export default function Home() {
   };
 
   const handleChange = (e) => {
-    setSnazyID(e.target.value);
+    if (isPaste) {
+    } else {
+      setIsPaste(false);
+      setSnazyID(e.target.value);
+    }
+    setIsPaste(false);
     setIsDisable(true);
+
     if (snazyID.length > 3) {
       if (Boolean(snazyID.match(/https:\/\/snazzymaps\.com\/embed\//gm))) {
         setSnazyID(snazyID.split("/")[snazyID.split("/").length - 1]);
@@ -35,11 +42,6 @@ export default function Home() {
       }
     }
   };
-  const handlePaste = (e) => {
-    if (Boolean(e.target.value.match(/https:\/\/snazzymaps\.com/gm))) {
-      setSnazyID(e.target.value);
-    }
-  };
 
   return (
     <div className={`${styles.container} ${styles.center}`}>
@@ -49,11 +51,15 @@ export default function Home() {
         <h6>Please Provive last Digit Or Full Snazzy map url</h6>
         <input
           type="text"
-          onChange={(e) => {
+          onInput={(e) => {
             handleChange(e);
           }}
           value={snazyID}
-          onPaste={handlePaste}
+          onPaste={(e) => {
+            setError(false);
+            setIsPaste(true);
+            setSnazyID(e.clipboardData.getData("Text"));
+          }}
         />
         <p
           className={`${styles.errorMessage} ${isError ? styles.visible : ""}`}
