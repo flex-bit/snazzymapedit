@@ -27,7 +27,7 @@ const EditSection = () => {
     setIsDisable(true);
 
     if (snazyID.length > 3) {
-      if (Boolean(snazyID.match(/https:\/\/snazzymaps\.com\/embed\//gm))) {
+      if (Boolean(snazyID.match(/https:\/\/snazzymaps\.com\//gm))) {
         setSnazyID(snazyID.split("/")[snazyID.split("/").length - 1]);
         setIsDisable(false);
       } else if (Boolean(snazyID.match(/^[0-9]*$/gm)) === true) {
