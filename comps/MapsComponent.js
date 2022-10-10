@@ -45,7 +45,7 @@ const MapsComponent = () => {
   return (
     <>
       <h2>OR</h2>
-      <div>
+      <div className={`${styles.searchContainer}`}>
         <label htmlFor="" className={`${styles.searchLabel}`}>
           Search for a map
         </label>
