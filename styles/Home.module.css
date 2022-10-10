@@ -7,7 +7,7 @@
   padding: 40px 20px;
 }
 .spacer {
-  height: 10vw;
+  height: 2vw;
 }
 .center {
   display: flex;
@@ -21,7 +21,22 @@
   padding: 8px 22px;
   background-color: tan;
   border-radius: 7px;
-  margin: 32px 0;
+  margin: 10px 0;
+  color: currentColor;
+}
+.btnRefresh {
+  display: flex;
+  max-width: 140px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px 22px;
+  background-color: #22b8cf;
+  border-radius: 7px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
   color: currentColor;
 }
 .errorMessage {
@@ -30,6 +45,11 @@
 }
 .visible {
   opacity: 100%;
+}
+
+.searchLabel {
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 .disable {
@@ -45,11 +65,62 @@
   left: 20px;
   color: #22b8cf;
 }
+.sMap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  /* background-color:; */
+  margin-top: 10px;
+}
+.verify {
+  color: #8ce99a;
+}
+.hide {
+  display: none;
+}
+.mapCards {
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  width: 100%;
+  padding: 50px 40px;
 
+  gap: 2vw;
+}
+.card {
+  position: relative;
+  background-color: red;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.mapImage {
+  width: 100%;
+}
+.mapName {
+  position: absolute;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: 0;
+  color: #111;
+  text-align: center;
+  width: 100%;
+  background-color: tan;
+  padding: 10px 0;
+  text-transform: capitalize;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+  .mapCards {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
 
