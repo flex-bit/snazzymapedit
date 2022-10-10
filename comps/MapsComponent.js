@@ -223,6 +223,7 @@ const MapsComponent = () => {
           .map((loc) => {
             return (
               <a
+                target="_blank"
                 href={`https://snazzymaps.com${loc.link}`}
                 className={`${styles.card}`}
               >
