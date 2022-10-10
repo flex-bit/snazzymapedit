@@ -64,6 +64,7 @@
   bottom: 20px;
   left: 20px;
   color: #22b8cf;
+  z-index: 99;
 }
 .sMap {
   display: flex;
