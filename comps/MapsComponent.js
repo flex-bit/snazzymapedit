@@ -212,6 +212,7 @@ const MapsComponent = () => {
         </div>
       </div>
       <div className={`${styles.icon} ${!isAPILoading ? styles.hide : ""}`}>
+        <h4>Loading...</h4>
         <svg width="100%" height="100%" viewBox="0 0 24 24">
           <circle cx="12" cy="2" r="0" fill="currentColor">
             <animate
