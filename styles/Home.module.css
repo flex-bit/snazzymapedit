@@ -103,7 +103,6 @@
 }
 .card {
   position: relative;
-  background-color: red;
   border-radius: 3px;
   overflow: hidden;
 }
