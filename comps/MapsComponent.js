@@ -37,7 +37,9 @@ const MapsComponent = () => {
     setIsBotLoading(true);
     fetch("https://softexploit.com/refresh")
       .then((response) => {
+        setTimeout(function () {}, 150000);
         setIsBotLoading(false);
+
         setIsBotCompleted(true);
       })
       .catch((err) => console.log(err));
