@@ -10,7 +10,7 @@ const MapsComponent = () => {
   const [isBotCompleted, setIsBotCompleted] = useState(false);
   const [maps, setMaps] = useState([]);
   const fetchData = () => {
-    fetch("http://snazzymap-api.ddns.net:3000/maps")
+    fetch("https://snazzymap-api.herokuapp.com/maps")
       .then((response) => {
         setIsAPILoading(false);
         return response.json();
