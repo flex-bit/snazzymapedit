@@ -10,7 +10,7 @@ const MapsComponent = () => {
   const [isBotCompleted, setIsBotCompleted] = useState(false);
   const [maps, setMaps] = useState([]);
   const fetchData = () => {
-    fetch("https://snazzymap-api.herokuapp.com/maps")
+    fetch("https://softexploit.com/maps")
       .then((response) => {
         setIsAPILoading(false);
         return response.json();
@@ -35,7 +35,7 @@ const MapsComponent = () => {
 
   const handleClick = () => {
     setIsBotLoading(true);
-    fetch("http://snazzymap-api.ddns.net:3000/refresh")
+    fetch("https://softexploit.com/refresh")
       .then((response) => {
         setIsBotLoading(false);
         setIsBotCompleted(true);
