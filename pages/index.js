@@ -11,10 +11,6 @@ export default function Home() {
     <>
       <Head>
         <title>SMET</title>
-        <meta
-          http-equiv="Content-Security-Policy"
-          content="upgrade-insecure-requests"
-        ></meta>
       </Head>
       <EditSection />
       <div className={`${styles.sMap}`}>
