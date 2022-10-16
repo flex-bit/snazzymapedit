@@ -40,9 +40,8 @@ const EditSection = () => {
   };
 
   return (
-    <div className={`${styles.container} ${styles.center}`}>
-      <h1>Snazzy maps edit tool</h1>
-      <div className={`${styles.spacer}`}></div>
+    <div className={`${styles.container}`}>
+      <h1>Smet</h1>
       <div className={`${styles.halfC}`}>
         <h6>Please Provive last Digit Or Full Snazzy map url</h6>
         <input

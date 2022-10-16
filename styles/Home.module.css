@@ -4,7 +4,7 @@
 }
 .halfC {
   max-width: 700px;
-  padding: 40px 20px;
+  /* padding: 40px 20px; */
 }
 .spacer {
   height: 2vw;
@@ -79,7 +79,9 @@
   /* margin: 0 auto; */
   place-items: center;
 }
-
+.smallP {
+  font-size: 10px;
+}
 .icon {
   width: 32px;
   height: 32px;
@@ -102,25 +104,38 @@
   gap: 2vw;
 }
 .card {
+  padding: 20px 10px;
   position: relative;
-  border-radius: 3px;
+  border-radius: 6px;
   overflow: hidden;
+  box-shadow: 3px 2px 38px -5px rgba(0, 0, 0, 0.66);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .mapImage {
   width: 100%;
+  border-radius: 3px;
 }
 .mapName {
-  position: absolute;
-  top: auto;
-  left: auto;
-  right: auto;
-  bottom: 0;
-  color: #111;
-  text-align: center;
+  /* text-align: center; */
   width: 100%;
-  background-color: tan;
-  padding: 10px 0;
-  text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 0 !important;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background-color: #f783ac;
+  }
+  .mapName {
+    color: #333;
+  }
 }
 @media (max-width: 600px) {
   .grid {

@@ -9,6 +9,9 @@ import MapsComponent from "../comps/MapsComponent";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>SMET</title>
+      </Head>
       <EditSection />
       <div className={`${styles.sMap}`}>
         <MapsComponent />
